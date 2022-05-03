@@ -1,0 +1,35 @@
+{
+    "name": "idopin/api-support",
+    "description": "Laravel project api support.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yousee",
+            "email": "slzs520@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.2",
+        "laravel/passport": "^10.4",
+        "gregwar/captcha": "^1.1",
+        "overtrue/easy-sms": "^2.1",
+        "propaganistas/laravel-phone": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Idopin\\ApiSupport\\": "src/units"
+        },
+        "files": [
+            "src/units/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Idopin\\ApiSupport\\Providers\\ServiceProvider",
+                "Idopin\\ApiSupport\\Providers\\EventServiceProvider"
+            ]
+        }
+    }
+}
